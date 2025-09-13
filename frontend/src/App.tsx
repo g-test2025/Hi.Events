@@ -68,10 +68,10 @@ export const App: FC<
         theme={{
           colors: {
             primary: generateColors(
-              getConfig("VITE_APP_PRIMARY_COLOR", "#121111") as string
+              getConfig("VITE_APP_PRIMARY_COLOR", "#0a0a0a") as string
             ),
             secondary: generateColors(
-              getConfig("VITE_APP_SECONDARY_COLOR", "#f7f7f2") as string
+              getConfig("VITE_APP_SECONDARY_COLOR", "#fcfcfc") as string
             ),
           },
           primaryColor: "primary",
