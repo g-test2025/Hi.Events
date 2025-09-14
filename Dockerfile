@@ -1,6 +1,3 @@
-FROM node:alpine AS node-frontend
-
-
 WORKDIR /app/frontend
 
 RUN apk add --no-cache yarn
