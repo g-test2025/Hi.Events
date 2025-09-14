@@ -1,5 +1,6 @@
 FROM node:alpine AS node-frontend
 
+
 WORKDIR /app/frontend
 
 RUN apk add --no-cache yarn
@@ -14,7 +15,6 @@ COPY render-start.sh /render-start.sh
 RUN chmod +x /render-start.sh
 
 
-COPY --from=node-frontend /app/frontend /app/frontend
 
 COPY ./backend /app/backend
 RUN mkdir -p /app/backend/bootstrap/cache \
@@ -40,6 +40,7 @@ RUN dos2unix /startup.sh && chmod +x /startup.sh
 EXPOSE 80
 
 WORKDIR /app
+
 
 CMD ["/render-start.sh"]
 
