@@ -1,2 +1,1 @@
-FROM composer as builder
-RUN docker compose up -d
+CMD bash -c "docker compose up -d"
